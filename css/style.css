@@ -553,13 +553,14 @@ nav a:hover {
 /* CTA */
 
 .cta {
-  padding: 90px 0;
+  padding: 100px 0;
+  background: var(--cream);
 }
 
 .cta-box {
-  background: linear-gradient(135deg, #171717, #25251f);
-  color: white;
-  border-radius: 38px;
+  background: #23281f;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 36px;
   padding: 70px;
   display: flex;
   justify-content: space-between;
@@ -567,17 +568,19 @@ nav a:hover {
   gap: 40px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
 .cta-box::before {
   content: "";
   position: absolute;
-  width: 320px;
-  height: 320px;
-  background: rgba(167, 176, 138, 0.22);
-  filter: blur(75px);
-  right: -90px;
-  top: -90px;
+  width: 350px;
+  height: 350px;
+  background: rgba(201,184,156,0.12);
+  border-radius: 50%;
+  filter: blur(90px);
+  top: -150px;
+  right: -120px;
 }
 
 .cta-box > * {
@@ -586,15 +589,37 @@ nav a:hover {
 }
 
 .cta-box h2 {
-  font-size: 48px;
-  line-height: 1.15;
-  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  line-height: 1.1;
+  color: #f8f5f0;
+  margin-bottom: 18px;
+  max-width: 700px;
 }
 
 .cta-box p {
-  color: #d7d7d7;
+  color: rgba(248,245,240,0.75);
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
+@media (max-width: 900px) {
+
+  .cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+  }
+
+  .cta-box h2 {
+    font-size: 38px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+  }
+}
 /* FOOTER */
 
 footer {
