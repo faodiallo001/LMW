@@ -90,6 +90,12 @@ header {
   display: block;
 }
 
+.menu-toggle{
+    display:none;
+}
+
+
+
 nav ul {
   display: flex;
   gap: 34px;
@@ -742,6 +748,53 @@ footer a:hover {
 }
 
 /* MOBILE */
+
+
+@media (max-width:900px){
+
+    .menu-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:48px;
+        height:48px;
+        border:none;
+        border-radius:14px;
+        background:rgba(255,255,255,.6);
+        backdrop-filter:blur(12px);
+        font-size:24px;
+        cursor:pointer;
+    }
+
+    nav{
+        position:absolute;
+        top:85px;
+        left:0;
+        right:0;
+
+        background:rgba(255,255,255,.95);
+        backdrop-filter:blur(20px);
+
+        border-radius:24px;
+
+        padding:25px;
+
+        display:none;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+}
 
 @media (max-width: 900px) {
   header {
