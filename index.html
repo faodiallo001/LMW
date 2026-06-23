@@ -3,26 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LMV Healthcare Solutions</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+:root{
+--cream:#F8F5F0;
+--cream-dark:#EFE8DD;
+--charcoal:#161616;
+--olive:#687154;
+--olive-light:#A7B08A;
+--brown:#6F5E4D;
+--glass:rgba(255,255,255,.48);
+}
+
 body{
 font-family:Inter,sans-serif;
-background:#F8F5F0;
-color:#1F1F1F;
+background:radial-gradient(circle at top right,#E9E0D3,#F8F5F0 45%);
+color:var(--charcoal);
 line-height:1.7;
 }
 
@@ -31,53 +38,69 @@ width:min(1200px,90%);
 margin:auto;
 }
 
+/* HEADER */
+
 header{
-background:#F8F5F0;
-padding:28px 0;
-border-bottom:1px solid #E6DED2;
+position:sticky;
+top:20px;
+z-index:100;
+margin-top:20px;
 }
 
 .navbar{
+background:rgba(255,255,255,.55);
+backdrop-filter:blur(22px);
+border:1px solid rgba(255,255,255,.6);
+border-radius:70px;
+padding:16px 24px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 }
 
 .logo{
-font-family:Playfair Display,serif;
-font-size:32px;
+font-family:"Playfair Display",serif;
+font-size:30px;
 font-weight:700;
 }
 
 nav ul{
 display:flex;
-gap:40px;
+gap:34px;
 list-style:none;
 }
 
 nav a{
 text-decoration:none;
-color:#1F1F1F;
-font-weight:500;
-}
-
-.btn{
-background:#5F654C;
-color:white;
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-display:inline-block;
+color:#222;
 font-weight:600;
-transition:.3s;
+font-size:14px;
 }
 
-.btn:hover{
-opacity:.9;
+.nav-btn,
+.btn{
+background:linear-gradient(135deg,var(--olive),var(--olive-light));
+color:white;
+padding:15px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+display:inline-block;
+box-shadow:0 18px 35px rgba(104,113,84,.25);
+transition:.35s;
 }
+
+.nav-btn:hover,
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 25px 55px rgba(104,113,84,.38);
+}
+
+/* HERO */
 
 .hero{
-padding:100px 0;
+padding:110px 0 90px;
 }
 
 .hero-grid{
@@ -87,171 +110,348 @@ gap:70px;
 align-items:center;
 }
 
+.label{
+font-size:13px;
+letter-spacing:2.5px;
+text-transform:uppercase;
+color:var(--brown);
+font-weight:700;
+margin-bottom:18px;
+}
+
 .hero h1{
-font-family:Playfair Display,serif;
-font-size:72px;
-line-height:1.1;
-margin-bottom:25px;
+font-family:"Playfair Display",serif;
+font-size:76px;
+line-height:1.05;
+margin-bottom:26px;
 }
 
 .hero p{
 font-size:18px;
 color:#555;
-margin-bottom:35px;
 max-width:600px;
+margin-bottom:35px;
 }
 
-.hero img{
-width:100%;
-border-radius:0;
-object-fit:cover;
+.hero-actions{
+display:flex;
+gap:18px;
+align-items:center;
+flex-wrap:wrap;
 }
+
+.btn-outline{
+padding:15px 28px;
+border-radius:50px;
+text-decoration:none;
+color:#222;
+font-weight:700;
+background:rgba(255,255,255,.5);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.7);
+transition:.3s;
+}
+
+.btn-outline:hover{
+transform:translateY(-4px);
+background:white;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:100%;
+height:620px;
+object-fit:cover;
+border-radius:34px;
+box-shadow:0 35px 90px rgba(0,0,0,.18);
+}
+
+.floating-card{
+position:absolute;
+background:rgba(255,255,255,.55);
+backdrop-filter:blur(22px);
+border:1px solid rgba(255,255,255,.6);
+border-radius:22px;
+padding:22px 26px;
+box-shadow:0 25px 60px rgba(0,0,0,.14);
+}
+
+.float-one{
+left:-35px;
+bottom:70px;
+}
+
+.float-two{
+right:-30px;
+top:65px;
+}
+
+.floating-card strong{
+display:block;
+font-size:30px;
+font-family:"Playfair Display",serif;
+}
+
+.floating-card span{
+color:#555;
+font-size:14px;
+}
+
+/* SECTIONS */
 
 .section{
-padding:100px 0;
+padding:95px 0;
 }
 
-.section-label{
-color:#8B7D66;
-font-size:13px;
-letter-spacing:2px;
-text-transform:uppercase;
-margin-bottom:15px;
+.section-head{
+max-width:720px;
+margin-bottom:55px;
 }
 
-.section-title{
-font-family:Playfair Display,serif;
-font-size:52px;
-margin-bottom:60px;
+.section h2{
+font-family:"Playfair Display",serif;
+font-size:54px;
+line-height:1.15;
+margin-bottom:18px;
 }
+
+.section-head p{
+color:#555;
+font-size:17px;
+}
+
+/* SERVICES */
 
 .services{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
+gap:28px;
 }
 
-.card{
-background:white;
+.service-card{
+background:rgba(255,255,255,.52);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.65);
 padding:40px;
-border-radius:20px;
+border-radius:28px;
+box-shadow:0 25px 70px rgba(0,0,0,.08);
+transition:.35s;
 }
 
-.card h3{
-margin-bottom:15px;
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 35px 90px rgba(0,0,0,.13);
+}
+
+.service-number{
+font-size:14px;
+color:var(--olive);
+font-weight:800;
+margin-bottom:25px;
+}
+
+.service-card h3{
 font-size:24px;
+margin-bottom:16px;
 }
 
-.card p{
-color:#666;
+.service-card p{
+color:#5d5d5d;
+}
+
+/* WHO WE SERVE */
+
+.serve-wrap{
+background:#EFE8DD;
+border-radius:36px;
+padding:60px;
 }
 
 .industries{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
+gap:26px;
 }
 
-.industry-card{
-background:#EFE9DF;
-padding:40px;
-border-radius:20px;
-text-align:center;
+.industry{
+background:white;
+border-radius:26px;
+padding:42px;
+transition:.35s;
 }
+
+.industry:hover{
+transform:translateY(-8px);
+}
+
+.icon{
+font-size:38px;
+margin-bottom:18px;
+}
+
+.industry h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.industry p{
+color:#666;
+}
+
+/* ABOUT */
 
 .about-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+grid-template-columns:.9fr 1.1fr;
+gap:70px;
 align-items:center;
 }
 
-.about-image img{
+.about-img img{
 width:100%;
-height:550px;
+height:580px;
 object-fit:cover;
-}
-
-.about-content h2{
-font-family:Playfair Display,serif;
-font-size:54px;
-margin-bottom:25px;
+border-radius:34px;
+box-shadow:0 30px 80px rgba(0,0,0,.15);
 }
 
 .about-content p{
 color:#555;
-margin-bottom:30px;
+margin-bottom:22px;
 }
 
+.checks{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin:28px 0 34px;
+}
+
+.check{
+background:rgba(255,255,255,.55);
+backdrop-filter:blur(16px);
+border-radius:18px;
+padding:16px;
+font-weight:700;
+}
+
+/* STATS */
+
 .stats{
-background:white;
 padding:80px 0;
 }
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:30px;
+gap:22px;
+}
+
+.stat{
+background:rgba(255,255,255,.55);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.6);
+border-radius:26px;
+padding:35px;
 text-align:center;
 }
 
-.stat-number{
-font-family:Playfair Display,serif;
-font-size:52px;
-margin-bottom:10px;
+.stat strong{
+font-family:"Playfair Display",serif;
+font-size:48px;
+display:block;
 }
 
+.stat span{
+color:#666;
+}
+
+/* CTA */
+
 .cta{
-padding:100px 0;
+padding:90px 0;
 }
 
 .cta-box{
-background:#F0EBE3;
-padding:80px;
+background:linear-gradient(135deg,#171717,#25251f);
+color:white;
+border-radius:38px;
+padding:70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:30px;
+gap:40px;
+position:relative;
+overflow:hidden;
 }
 
-.cta h2{
-font-family:Playfair Display,serif;
+.cta-box:before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:rgba(167,176,138,.24);
+filter:blur(70px);
+right:-80px;
+top:-70px;
+}
+
+.cta-box h2{
+font-family:"Playfair Display",serif;
 font-size:48px;
+line-height:1.15;
 margin-bottom:15px;
 }
 
+.cta-box p{
+color:#d7d7d7;
+}
+
+/* FOOTER */
+
 footer{
-background:#181818;
+background:#111;
 color:white;
 padding:80px 0 30px;
 }
 
 .footer-grid{
 display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;
-gap:50px;
+grid-template-columns:2fr 1fr 1fr 1fr 1.4fr;
+gap:45px;
 }
 
-.footer-title{
-margin-bottom:20px;
-font-size:18px;
-font-weight:600;
-}
-
-.footer-grid a{
-display:block;
-margin-bottom:12px;
-color:#D8D8D8;
-text-decoration:none;
-}
-
-.footer-brand{
-max-width:300px;
+.footer-brand h3{
+font-family:"Playfair Display",serif;
+font-size:28px;
+margin-bottom:16px;
 }
 
 .footer-brand p{
-color:#B5B5B5;
-margin-top:15px;
+color:#aaa;
+max-width:320px;
+}
+
+.footer-title{
+font-weight:800;
+margin-bottom:20px;
+color:#F3E7D5;
+}
+
+footer a{
+display:block;
+color:#aaa;
+text-decoration:none;
+margin-bottom:12px;
+transition:.3s;
+}
+
+footer a:hover{
+color:white;
+transform:translateX(4px);
 }
 
 .footer-bottom{
@@ -259,16 +459,42 @@ margin-top:60px;
 padding-top:30px;
 border-top:1px solid rgba(255,255,255,.1);
 text-align:center;
-color:#999;
+color:#888;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
+.navbar{
+border-radius:30px;
+}
+
+nav{
+display:none;
+}
+
+.nav-btn{
+display:none;
+}
+
 .hero-grid,
-.about-grid,
-.cta-box{
+.about-grid{
 grid-template-columns:1fr;
-display:block;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero-image img{
+height:430px;
+}
+
+.float-one,
+.float-two{
+position:static;
+margin-top:18px;
 }
 
 .services,
@@ -278,27 +504,28 @@ display:block;
 grid-template-columns:1fr;
 }
 
-.hero h1{
-font-size:48px;
+.serve-wrap{
+padding:30px;
 }
 
-.section-title{
+.cta-box{
+display:block;
+padding:42px;
+}
+
+.cta-box h2{
+font-size:34px;
+}
+
+.section h2{
 font-size:38px;
 }
 
-.about-content h2{
-font-size:38px;
+.checks{
+grid-template-columns:1fr;
 }
 
-.cta h2{
-font-size:36px;
 }
-
-nav{
-display:none;
-}
-}
-
 </style>
 </head>
 
@@ -306,7 +533,6 @@ display:none;
 
 <header>
 <div class="container navbar">
-
 <div class="logo">LMV</div>
 
 <nav>
@@ -319,281 +545,230 @@ display:none;
 </ul>
 </nav>
 
-<a href="#" class="btn">Schedule Consultation</a>
-
+<a href="#" class="nav-btn">Schedule Consultation</a>
 </div>
 </header>
 
 <section class="hero">
-
 <div class="container hero-grid">
 
 <div>
-
-<div class="section-label">
-Healthcare Consulting
-</div>
-
-<h1>
-Better Operations.
-Better Outcomes.
-</h1>
-
+<div class="label">Healthcare Consulting</div>
+<h1>Strategic Healthcare Consulting for Modern Care Organizations.</h1>
 <p>
-Helping hospitals, hospital pharmacies, and long-term care facilities improve performance, strengthen compliance, and support sustainable growth.
+LMV Healthcare Solutions helps hospitals, hospital pharmacies, and long-term care facilities strengthen operations, improve compliance, and create better outcomes.
 </p>
 
-<a href="#" class="btn">
-Let's Work Together
-</a>
-
+<div class="hero-actions">
+<a href="#" class="btn">Schedule Consultation</a>
+<a href="#" class="btn-outline">Explore Services</a>
+</div>
 </div>
 
-<div>
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400" alt="Healthcare consulting meeting">
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200" alt="">
+<div class="floating-card float-one">
+<strong>20+</strong>
+<span>Years of Healthcare Experience</span>
+</div>
 
+<div class="floating-card float-two">
+<strong>3</strong>
+<span>Core Healthcare Sectors</span>
+</div>
 </div>
 
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="container">
 
-<div class="section-label">
-Our Services
+<div class="section-head">
+<div class="label">Our Services</div>
+<h2>Practical support for complex healthcare environments.</h2>
+<p>
+We provide consulting solutions designed to improve care delivery, operational performance, and regulatory readiness.
+</p>
 </div>
-
-<h2 class="section-title">
-How We Help
-</h2>
 
 <div class="services">
 
-<div class="card">
+<div class="service-card">
+<div class="service-number">01</div>
 <h3>Clinical Consulting</h3>
 <p>
-Expert guidance to improve care quality, workflows, and patient outcomes.
+Guidance to improve care quality, strengthen workflows, and support better clinical outcomes.
 </p>
 </div>
 
-<div class="card">
+<div class="service-card">
+<div class="service-number">02</div>
 <h3>Operational Improvement</h3>
 <p>
-Streamline operations and improve organizational performance.
+Support for healthcare teams looking to improve efficiency, reduce gaps, and optimize daily operations.
 </p>
 </div>
 
-<div class="card">
+<div class="service-card">
+<div class="service-number">03</div>
 <h3>Regulatory Compliance</h3>
 <p>
-Support for audits, surveys, and healthcare compliance requirements.
+Preparation and support for surveys, audits, standards, documentation, and compliance expectations.
 </p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="section">
+<div class="container serve-wrap">
 
-<div class="container">
-
-<div class="section-label">
-Who We Serve
+<div class="section-head">
+<div class="label">Who We Serve</div>
+<h2>Focused expertise across three healthcare settings.</h2>
 </div>
-
-<h2 class="section-title">
-Healthcare Organizations We Support
-</h2>
 
 <div class="industries">
 
-<div class="industry-card">
-🏥
+<div class="industry">
+<div class="icon">🏥</div>
 <h3>Hospitals</h3>
+<p>Operational and clinical consulting for hospital environments.</p>
 </div>
 
-<div class="industry-card">
-💊
+<div class="industry">
+<div class="icon">💊</div>
 <h3>Hospital Pharmacies</h3>
+<p>Support for pharmacy operations, compliance, and care coordination.</p>
 </div>
 
-<div class="industry-card">
-🏡
+<div class="industry">
+<div class="icon">🏡</div>
 <h3>Long-Term Care Facilities</h3>
+<p>Consulting for care quality, survey readiness, and operational performance.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="container about-grid">
 
-<div class="about-image">
-
-<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200">
-
+<div class="about-img">
+<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1400" alt="Professional consulting team">
 </div>
 
 <div class="about-content">
-
-<div class="section-label">
-About LMV
-</div>
-
-<h2>
-Healthcare Expertise.
-Real-World Impact.
-</h2>
+<div class="label">About LMV</div>
+<h2>Experience-led consulting with a practical approach.</h2>
 
 <p>
-LMV Healthcare Solutions partners with healthcare organizations to strengthen operations, improve compliance, and drive meaningful results through practical, experience-based solutions.
+LMV Healthcare Solutions partners with healthcare organizations to identify challenges, strengthen systems, and implement meaningful improvements.
 </p>
 
-<a href="#" class="btn">
-Learn More
-</a>
+<p>
+Our approach is hands-on, collaborative, and built around the realities of modern healthcare operations.
+</p>
 
+<div class="checks">
+<div class="check">✓ Compliance Focused</div>
+<div class="check">✓ Operationally Practical</div>
+<div class="check">✓ Healthcare Experienced</div>
+<div class="check">✓ Results Driven</div>
+</div>
+
+<a href="#" class="btn">Learn More</a>
 </div>
 
 </div>
-
 </section>
 
 <section class="stats">
+<div class="container stats-grid">
 
-<div class="container">
-
-<div class="stats-grid">
-
-<div>
-<div class="stat-number">20+</div>
-Years Experience
+<div class="stat">
+<strong>20+</strong>
+<span>Years Experience</span>
 </div>
 
-<div>
-<div class="stat-number">100+</div>
-Organizations Served
+<div class="stat">
+<strong>100+</strong>
+<span>Organizations Supported</span>
 </div>
 
-<div>
-<div class="stat-number">98%</div>
-Client Satisfaction
+<div class="stat">
+<strong>98%</strong>
+<span>Client Satisfaction</span>
 </div>
 
-<div>
-<div class="stat-number">3</div>
-Healthcare Sectors
+<div class="stat">
+<strong>3</strong>
+<span>Healthcare Sectors</span>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 <section class="cta">
-
 <div class="container">
 
 <div class="cta-box">
-
 <div>
-
-<h2>
-Ready to Strengthen Your Organization?
-</h2>
-
-<p>
-Let's discuss your goals and opportunities for improvement.
-</p>
-
+<h2>Ready to strengthen your healthcare organization?</h2>
+<p>Let’s discuss how LMV can support your next stage of improvement.</p>
 </div>
 
-<a href="#" class="btn">
-Schedule Consultation
-</a>
-
+<a href="#" class="btn">Let’s Connect</a>
 </div>
 
 </div>
-
 </section>
 
 <footer>
-
 <div class="container">
 
 <div class="footer-grid">
 
 <div class="footer-brand">
-
 <h3>LMV Healthcare Solutions</h3>
-
 <p>
 Healthcare consulting focused on operational excellence, compliance, and sustainable improvement.
 </p>
-
 </div>
 
 <div>
-
-<div class="footer-title">
-Company
-</div>
-
+<div class="footer-title">Company</div>
 <a href="#">Home</a>
 <a href="#">About</a>
 <a href="#">Services</a>
 <a href="#">Resources</a>
 <a href="#">Contact</a>
-
 </div>
 
 <div>
-
-<div class="footer-title">
-Services
-</div>
-
+<div class="footer-title">Services</div>
 <a href="#">Clinical Consulting</a>
 <a href="#">Operational Improvement</a>
 <a href="#">Regulatory Compliance</a>
-
 </div>
 
 <div>
-
-<div class="footer-title">
-Who We Serve
-</div>
-
+<div class="footer-title">Who We Serve</div>
 <a href="#">Hospitals</a>
 <a href="#">Hospital Pharmacies</a>
 <a href="#">Long-Term Care</a>
-
 </div>
 
 <div>
-
-<div class="footer-title">
-Let's Connect
-</div>
-
+<div class="footer-title">Let’s Connect</div>
+<a href="#">number</a>
 <a href="#">info@lmvhealthcare.com</a>
 <a href="#">LinkedIn</a>
 <a href="#">United States</a>
-
 </div>
 
 </div>
@@ -603,7 +778,6 @@ Let's Connect
 </div>
 
 </div>
-
 </footer>
 
 </body>
