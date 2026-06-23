@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LMV Healthcare Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Inter,sans-serif;
+background:#F8F5F0;
+color:#1F1F1F;
+line-height:1.7;
+}
+
+.container{
+width:min(1200px,90%);
+margin:auto;
+}
+
+header{
+background:#F8F5F0;
+padding:28px 0;
+border-bottom:1px solid #E6DED2;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:Playfair Display,serif;
+font-size:32px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+gap:40px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1F1F1F;
+font-weight:500;
+}
+
+.btn{
+background:#5F654C;
+color:white;
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+display:inline-block;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+opacity:.9;
+}
+
+.hero{
+padding:100px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.hero h1{
+font-family:Playfair Display,serif;
+font-size:72px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+margin-bottom:35px;
+max-width:600px;
+}
+
+.hero img{
+width:100%;
+border-radius:0;
+object-fit:cover;
+}
+
+.section{
+padding:100px 0;
+}
+
+.section-label{
+color:#8B7D66;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:15px;
+}
+
+.section-title{
+font-family:Playfair Display,serif;
+font-size:52px;
+margin-bottom:60px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+color:#666;
+}
+
+.industries{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.industry-card{
+background:#EFE9DF;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image img{
+width:100%;
+height:550px;
+object-fit:cover;
+}
+
+.about-content h2{
+font-family:Playfair Display,serif;
+font-size:54px;
+margin-bottom:25px;
+}
+
+.about-content p{
+color:#555;
+margin-bottom:30px;
+}
+
+.stats{
+background:white;
+padding:80px 0;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+text-align:center;
+}
+
+.stat-number{
+font-family:Playfair Display,serif;
+font-size:52px;
+margin-bottom:10px;
+}
+
+.cta{
+padding:100px 0;
+}
+
+.cta-box{
+background:#F0EBE3;
+padding:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+}
+
+.cta h2{
+font-family:Playfair Display,serif;
+font-size:48px;
+margin-bottom:15px;
+}
+
+footer{
+background:#181818;
+color:white;
+padding:80px 0 30px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;
+gap:50px;
+}
+
+.footer-title{
+margin-bottom:20px;
+font-size:18px;
+font-weight:600;
+}
+
+.footer-grid a{
+display:block;
+margin-bottom:12px;
+color:#D8D8D8;
+text-decoration:none;
+}
+
+.footer-brand{
+max-width:300px;
+}
+
+.footer-brand p{
+color:#B5B5B5;
+margin-top:15px;
+}
+
+.footer-bottom{
+margin-top:60px;
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,.1);
+text-align:center;
+color:#999;
+}
+
+@media(max-width:900px){
+
+.hero-grid,
+.about-grid,
+.cta-box{
+grid-template-columns:1fr;
+display:block;
+}
+
+.services,
+.industries,
+.stats-grid,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.section-title{
+font-size:38px;
+}
+
+.about-content h2{
+font-size:38px;
+}
+
+.cta h2{
+font-size:36px;
+}
+
+nav{
+display:none;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">LMV</div>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Resources</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<a href="#" class="btn">Schedule Consultation</a>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="section-label">
+Healthcare Consulting
+</div>
+
+<h1>
+Better Operations.
+Better Outcomes.
+</h1>
+
+<p>
+Helping hospitals, hospital pharmacies, and long-term care facilities improve performance, strengthen compliance, and support sustainable growth.
+</p>
+
+<a href="#" class="btn">
+Let's Work Together
+</a>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+Our Services
+</div>
+
+<h2 class="section-title">
+How We Help
+</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Clinical Consulting</h3>
+<p>
+Expert guidance to improve care quality, workflows, and patient outcomes.
+</p>
+</div>
+
+<div class="card">
+<h3>Operational Improvement</h3>
+<p>
+Streamline operations and improve organizational performance.
+</p>
+</div>
+
+<div class="card">
+<h3>Regulatory Compliance</h3>
+<p>
+Support for audits, surveys, and healthcare compliance requirements.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+Who We Serve
+</div>
+
+<h2 class="section-title">
+Healthcare Organizations We Support
+</h2>
+
+<div class="industries">
+
+<div class="industry-card">
+🏥
+<h3>Hospitals</h3>
+</div>
+
+<div class="industry-card">
+💊
+<h3>Hospital Pharmacies</h3>
+</div>
+
+<div class="industry-card">
+🏡
+<h3>Long-Term Care Facilities</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200">
+
+</div>
+
+<div class="about-content">
+
+<div class="section-label">
+About LMV
+</div>
+
+<h2>
+Healthcare Expertise.
+Real-World Impact.
+</h2>
+
+<p>
+LMV Healthcare Solutions partners with healthcare organizations to strengthen operations, improve compliance, and drive meaningful results through practical, experience-based solutions.
+</p>
+
+<a href="#" class="btn">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div>
+<div class="stat-number">20+</div>
+Years Experience
+</div>
+
+<div>
+<div class="stat-number">100+</div>
+Organizations Served
+</div>
+
+<div>
+<div class="stat-number">98%</div>
+Client Satisfaction
+</div>
+
+<div>
+<div class="stat-number">3</div>
+Healthcare Sectors
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+Ready to Strengthen Your Organization?
+</h2>
+
+<p>
+Let's discuss your goals and opportunities for improvement.
+</p>
+
+</div>
+
+<a href="#" class="btn">
+Schedule Consultation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<h3>LMV Healthcare Solutions</h3>
+
+<p>
+Healthcare consulting focused on operational excellence, compliance, and sustainable improvement.
+</p>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+Company
+</div>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Resources</a>
+<a href="#">Contact</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+Services
+</div>
+
+<a href="#">Clinical Consulting</a>
+<a href="#">Operational Improvement</a>
+<a href="#">Regulatory Compliance</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+Who We Serve
+</div>
+
+<a href="#">Hospitals</a>
+<a href="#">Hospital Pharmacies</a>
+<a href="#">Long-Term Care</a>
+
+</div>
+
+<div>
+
+<div class="footer-title">
+Let's Connect
+</div>
+
+<a href="#">info@lmvhealthcare.com</a>
+<a href="#">LinkedIn</a>
+<a href="#">United States</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 LMV Healthcare Solutions. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
