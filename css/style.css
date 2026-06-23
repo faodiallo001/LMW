@@ -84,6 +84,12 @@ header {
   color: var(--charcoal);
 }
 
+.logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
 nav ul {
   display: flex;
   gap: 34px;
