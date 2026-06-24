@@ -89,12 +89,8 @@ header{
 }
 
 .menu-toggle{
-  background:none;
-  border:none;
-  font-size:32px;
-  color:var(--charcoal);
+    display:none;
 }
-
 
 nav ul {
   display: flex;
@@ -912,31 +908,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 900px) {
-  header {
-    top: 12px;
-  }
 
-  .navbar {
-    border-radius: 28px;
-    padding: 14px 18px;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .nav-btn {
-    display: none;
-  }
-
-  .logo {
-    font-size: 28px;
-  }
-
-  .hero {
-    padding: 75px 0 60px;
-  }
 
   .hero-grid,
   .about-grid,
