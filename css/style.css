@@ -59,12 +59,16 @@ a {
 /* HEADER */
 
 header {
-  position: sticky;
-  top: 18px;
-  z-index: 1000;
-  padding: 0 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 15px 0;
 }
-
+body {
+  padding-top: 110px;
+}
 .navbar {
   background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(22px);
