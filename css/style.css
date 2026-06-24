@@ -83,11 +83,10 @@ header{
 }
 
 .logo img {
-  height: 140px;
+  height: 60px;
   width: auto;
   display: block;
 }
-
 .menu-toggle{
     display:none;
 }
@@ -409,17 +408,6 @@ nav a:hover {
     width:100%;
 }
 
-.contact-wrapper{
-    grid-template-columns:1fr;
-}
-
-.contact-hero h1{
-    font-size:42px;
-}
-
-.glass-form{
-    padding:25px;
-}
 
 @media(max-width:900px){
 
@@ -444,6 +432,8 @@ nav a:hover {
     height:220px;
   }
 }
+
+
 /* WHO WE SERVE */
 
 .serve-wrap {
@@ -500,6 +490,9 @@ nav a:hover {
   color: var(--muted);
 }
 
+
+
+
 /* ABOUT */
 
 .about-grid {
@@ -544,6 +537,9 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.72);
 }
 
+
+
+
 /* STATS */
 
 .stats {
@@ -576,6 +572,9 @@ nav a:hover {
 .stat span {
   color: var(--muted);
 }
+
+
+
 
 /* RESOURCES */
 
@@ -631,6 +630,10 @@ nav a:hover {
   color: var(--olive-dark);
   font-weight: 800;
 }
+
+
+
+
 
 /* CONTACT */
 
@@ -688,6 +691,9 @@ nav a:hover {
   min-height: 140px;
   resize: vertical;
 }
+
+
+
 
 /* CTA */
 
@@ -759,6 +765,10 @@ nav a:hover {
     font-size: 16px;
   }
 }
+
+
+
+
 /* FOOTER */
 
 footer {
@@ -859,10 +869,13 @@ footer a:hover {
   margin-bottom: 22px;
 }
 
+
+
+
 /* MOBILE */
 
 
-@media (max-width:900px){
+@media(max-width:900px){
 
     .menu-toggle{
         display:flex;
@@ -878,11 +891,15 @@ footer a:hover {
         cursor:pointer;
     }
 
+    .nav-btn{
+        display:none;
+    }
+
     nav{
         position:absolute;
-        top:85px;
-        left:0;
-        right:0;
+        top:90px;
+        left:20px;
+        right:20px;
 
         background:rgba(255,255,255,.95);
         backdrop-filter:blur(20px);
@@ -906,16 +923,26 @@ footer a:hover {
     nav a{
         font-size:16px;
     }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .contact-hero h1{
+        font-size:42px;
+    }
+
+    .glass-form{
+        padding:25px;
+    }
 }
-
-
-
-  .hero-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
 
   .hero h1 {
     font-size: 46px;
