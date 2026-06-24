@@ -529,12 +529,13 @@ nav a:hover {
 }
 
 .check {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(16px);
+  background: var(--olive-dark);
+  color: #ffffff;
   border-radius: 18px;
   padding: 16px;
   font-weight: 750;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 
