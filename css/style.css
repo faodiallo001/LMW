@@ -513,10 +513,9 @@ nav a:hover {
 /* ABOUT */
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 70px;
-  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  display: block;
 }
 
 .about-img img {
