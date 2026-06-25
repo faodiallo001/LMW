@@ -752,6 +752,13 @@ nav a:hover {
   resize: vertical;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:var(--olive);
+    box-shadow:0 0 0 3px rgba(104,113,84,.20);
+}
+
 
 
 
