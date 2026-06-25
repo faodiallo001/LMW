@@ -509,6 +509,56 @@ nav a:hover {
 
 
 
+/* ABOUT + CONSULTANT SHARED LAYOUT */
+
+.profile-layout{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  grid-template-areas:
+    "image heading"
+    "image body";
+  gap:35px 70px;
+  align-items:start;
+}
+
+.profile-image{
+  grid-area:image;
+}
+
+.profile-image img{
+  width:100%;
+  height:580px;
+  object-fit:cover;
+  border-radius:34px;
+  box-shadow:0 30px 80px rgba(0,0,0,.15);
+}
+
+.profile-heading{
+  grid-area:heading;
+}
+
+.profile-heading h2{
+  font-family:"Playfair Display", serif;
+  font-size:52px;
+  line-height:1.15;
+  color:var(--charcoal);
+}
+
+.profile-body{
+  grid-area:body;
+}
+
+.profile-body p{
+  color:var(--muted);
+  margin-bottom:22px;
+  font-size:17px;
+}
+
+.consultant{
+  background:var(--cream);
+}
+
+
 
 /* ABOUT */
 
@@ -1107,6 +1157,26 @@ footer a:hover {
 .consultant-content h2{
   font-size:36px;
 }
+
+.profile-layout{
+  grid-template-columns:1fr;
+  grid-template-areas:
+    "heading"
+    "image"
+    "body";
+  gap:30px;
+}
+
+.profile-image img{
+  height:420px;
+  border-radius:26px;
+}
+
+.profile-heading h2{
+  font-size:38px;
+}
+
+   
 }
 
 @media (max-width: 480px) {
