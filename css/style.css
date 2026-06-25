@@ -727,24 +727,29 @@ nav a:hover {
   font-weight: 700;
 }
 
-.contact-form {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(18px);
-  padding: 35px;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
+.contact-form{
+  background:#23281f;
+  padding:35px;
+  border-radius:28px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
 .contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 17px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  margin-bottom: 16px;
-  font-family: Inter, sans-serif;
-  font-size: 15px;
-  background: white;
+.contact-form textarea{
+  width:100%;
+  padding:17px;
+  border-radius:16px;
+  border:none;
+  margin-bottom:16px;
+  font-family:Inter,sans-serif;
+  font-size:15px;
+  background:rgba(255,255,255,.08);
+  color:#fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:rgba(255,255,255,.7);
 }
 
 .contact-form textarea {
