@@ -383,10 +383,41 @@ nav a:hover {
     box-shadow:0 20px 60px rgba(0,0,0,.20);
 }
 
+.glass-form{
+    background:#23281f;
+    padding:40px;
+    border-radius:32px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    box-shadow:0 20px 60px rgba(0,0,0,.20);
+}
+
 .glass-form input,
 .glass-form textarea{
-    background:rgba(255,255,255,.12);
-    color:#ffffff;
+    width:100%;
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:16px;
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    font-size:16px;
+}
+
+.glass-form textarea{
+    grid-column:1 / -1;
+    min-height:180px;
+    resize:vertical;
+}
+
+.glass-form button{
+    grid-column:1 / -1;
+}
+
+.glass-form input::placeholder,
+.glass-form textarea::placeholder{
+    color:rgba(255,255,255,.65);
 }
 
 .glass-form input::placeholder,
