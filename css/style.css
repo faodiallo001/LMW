@@ -928,18 +928,46 @@ footer a:hover {
         padding:25px;
     }
 
-  .hero h1 {
-    font-size: 46px;
-  }
+  .hero{
+    padding:60px 0;
+}
 
-  .hero p {
-    font-size: 16px;
-  }
+.hero-title{
+    margin-bottom:25px;
+}
 
-  .hero-image img {
-    height: 430px;
-    border-radius: 26px;
-  }
+.hero h1{
+    font-size:42px;
+    line-height:1.15;
+}
+
+.hero-slider{
+    height:480px;
+    border-radius:24px;
+}
+
+.hero-overlay{
+    padding:28px;
+    justify-content:flex-end;
+}
+
+.hero-overlay p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.hero-actions{
+    flex-direction:column;
+    width:100%;
+    gap:14px;
+}
+
+.hero-actions .btn,
+.hero-actions .btn-outline{
+    width:100%;
+    text-align:center;
+}
 
   .section {
     padding: 70px 0;
