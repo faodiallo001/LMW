@@ -87,6 +87,11 @@ header{
   width: auto;
   display: block;
 }
+
+.logo{
+    margin-left:-20px;
+}
+
 .menu-toggle{
     display:none;
 }
