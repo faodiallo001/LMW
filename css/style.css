@@ -83,13 +83,13 @@ header{
 }
 
 .logo img {
-  height: 140px;
+  height: 160px;
   width: auto;
   display: block;
 }
 
 .logo{
-    margin-left:-40px;
+    margin-left:-70px;
 }
 
 .menu-toggle{
