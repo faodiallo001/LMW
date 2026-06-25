@@ -1045,6 +1045,9 @@ footer a:hover {
     .glass-form{
         padding:25px;
     }
+   .glass-form{
+    grid-template-columns:1fr;
+}
 
   .hero{
     padding:60px 0;
