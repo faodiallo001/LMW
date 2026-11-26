@@ -985,6 +985,25 @@ footer a:hover {
 
 @media(max-width:900px){
 
+   .logo {
+    width: 180px;
+    max-width: 65%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0;
+    transform: none;
+}
+
     .menu-toggle{
         display:flex;
         align-items:center;
@@ -1218,6 +1237,10 @@ footer a:hover {
   .container {
     width: min(92%, 100%);
   }
+
+   .logo {
+    width: 160px;
+}
 
   .hero h1 {
     font-size: 40px;
